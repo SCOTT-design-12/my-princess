@@ -270,3 +270,256 @@ button{
     border-radius:40px;
 
 }
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes float {
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        transform:translateY(0);
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:.35;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh);
+        opacity:0;
+
+    }
+
+}
+
+/* ========================= */
+/* FLOATING HEARTS */
+/* ========================= */
+
+.hearts{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    top:0;
+    left:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.hearts span{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    color:#d84b6b;
+
+    opacity:.25;
+
+    font-size:22px;
+
+    animation:heartFloat 12s linear infinite;
+
+}
+
+.hearts span:nth-child(1){
+
+    left:10%;
+    animation-duration:12s;
+
+}
+
+.hearts span:nth-child(2){
+
+    left:28%;
+    animation-duration:15s;
+    font-size:18px;
+
+}
+
+.hearts span:nth-child(3){
+
+    left:50%;
+    animation-duration:11s;
+    font-size:28px;
+
+}
+
+.hearts span:nth-child(4){
+
+    left:72%;
+    animation-duration:14s;
+
+}
+
+.hearts span:nth-child(5){
+
+    left:90%;
+    animation-duration:10s;
+    font-size:20px;
+
+}
+
+/* ========================= */
+/* ENVELOPE */
+/* ========================= */
+
+.envelope{
+
+    animation:float 3.5s ease-in-out infinite;
+
+}
+
+.envelope-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+/* ========================= */
+/* SMOOTH TRANSITION */
+/* ========================= */
+
+.screen{
+
+    transition:opacity .6s ease;
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:2.2rem;
+
+    }
+
+    h3{
+
+        font-size:1.1rem;
+
+    }
+
+    p{
+
+        font-size:1rem;
+
+    }
+
+    .teddy{
+
+        width:170px;
+
+    }
+
+    .flowers{
+
+        width:220px;
+
+    }
+
+    .envelope{
+
+        width:130px;
+
+    }
+
+    .letter{
+
+        width:95%;
+
+        padding:30px 22px;
+
+    }
+
+    .letter p{
+
+        text-align:left;
+
+        font-size:.95rem;
+
+        line-height:1.8;
+
+    }
+
+    .buttons{
+
+        gap:18px;
+
+    }
+
+    .yes,
+    .no{
+
+        width:65px;
+        height:65px;
+
+    }
+
+}
+
+/* ========================= */
+/* SCROLL FOR LETTER */
+/* ========================= */
+
+#screen3{
+
+    overflow-y:auto;
+
+    padding:40px 20px;
+
+}
